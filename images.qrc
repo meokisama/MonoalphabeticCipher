@@ -3,5 +3,6 @@
         <file>img/close.svg</file>
         <file>img/minimize.svg</file>
         <file>img/cryptography.svg</file>
+        <file>img/info.svg</file>
     </qresource>
 </RCC>

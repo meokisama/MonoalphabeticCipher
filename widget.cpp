@@ -6,12 +6,15 @@ Widget::Widget(QWidget *parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
+    cipherText = ui->cipher->toPlainText();
 }
 
 Widget::~Widget()
 {
     delete ui;
 }
+
+QString Widget::cipherText;
 
 void Widget::on_btnClose_clicked()
 {
@@ -67,34 +70,7 @@ void Widget::on_cipher_textChanged()
 
 void Widget::on_btnReplace_clicked()
 {
-    QString cipherText = ui->cipher->toPlainText();
-
-    if(ui->ta->text() != "") cipherText.replace("a", ui->ta->text(), Qt::CaseInsensitive);
-    if(ui->tb->text() != "") cipherText.replace("b", ui->tb->text(), Qt::CaseInsensitive);
-    if(ui->tc->text() != "") cipherText.replace("c", ui->tc->text(), Qt::CaseInsensitive);
-    if(ui->td->text() != "") cipherText.replace("d", ui->td->text(), Qt::CaseInsensitive);
-    if(ui->te->text() != "") cipherText.replace("e", ui->te->text(), Qt::CaseInsensitive);
-    if(ui->tf->text() != "") cipherText.replace("f", ui->tf->text(), Qt::CaseInsensitive);
-    if(ui->tg->text() != "") cipherText.replace("g", ui->tg->text(), Qt::CaseInsensitive);
-    if(ui->th->text() != "") cipherText.replace("h", ui->th->text(), Qt::CaseInsensitive);
-    if(ui->ti->text() != "") cipherText.replace("i", ui->ti->text(), Qt::CaseInsensitive);
-    if(ui->tj->text() != "") cipherText.replace("j", ui->tj->text(), Qt::CaseInsensitive);
-    if(ui->tk->text() != "") cipherText.replace("k", ui->tk->text(), Qt::CaseInsensitive);
-    if(ui->tl->text() != "") cipherText.replace("l", ui->tl->text(), Qt::CaseInsensitive);
-    if(ui->tm->text() != "") cipherText.replace("m", ui->tm->text(), Qt::CaseInsensitive);
-    if(ui->tn->text() != "") cipherText.replace("n", ui->tn->text(), Qt::CaseInsensitive);
-    if(ui->to->text() != "") cipherText.replace("o", ui->to->text(), Qt::CaseInsensitive);
-    if(ui->tp->text() != "") cipherText.replace("p", ui->tp->text(), Qt::CaseInsensitive);
-    if(ui->tq->text() != "") cipherText.replace("q", ui->tq->text(), Qt::CaseInsensitive);
-    if(ui->tr->text() != "") cipherText.replace("r", ui->tr->text(), Qt::CaseInsensitive);
-    if(ui->ts->text() != "") cipherText.replace("s", ui->ts->text(), Qt::CaseInsensitive);
-    if(ui->tt->text() != "") cipherText.replace("t", ui->tt->text(), Qt::CaseInsensitive);
-    if(ui->tu->text() != "") cipherText.replace("u", ui->tu->text(), Qt::CaseInsensitive);
-    if(ui->tv->text() != "") cipherText.replace("v", ui->tv->text(), Qt::CaseInsensitive);
-    if(ui->tw->text() != "") cipherText.replace("w", ui->tw->text(), Qt::CaseInsensitive);
-    if(ui->tx->text() != "") cipherText.replace("x", ui->tx->text(), Qt::CaseInsensitive);
-    if(ui->ty->text() != "") cipherText.replace("y", ui->ty->text(), Qt::CaseInsensitive);
-    if(ui->tz->text() != "") cipherText.replace("z", ui->tz->text(), Qt::CaseInsensitive);
+    cipherText = ui->cipher->toPlainText();
 
     ui->plain->setText(cipherText);
 
@@ -135,4 +111,140 @@ void Widget::on_btnClear_clicked()
     ui->tx->clear();
     ui->ty->clear();
     ui->tz->clear();
+}
+
+void Widget::on_btnInfo_clicked()
+{
+    QMessageBox::information(this, tr("  Phoenix Legion"), tr("Copyright - Phoenix Legion. \t\n\n[NT219.L21.ANTT] Letter Frequency Attack.\t\n"), QMessageBox::Ok);
+}
+
+void Widget::on_ta_textChanged(const QString &arg1)
+{
+    cipherText.replace("a", arg1, Qt::CaseInsensitive);
+
+}
+
+void Widget::on_tb_textChanged(const QString &arg1)
+{
+    cipherText.replace("b", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tc_textChanged(const QString &arg1)
+{
+    cipherText.replace("c", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_td_textChanged(const QString &arg1)
+{
+    cipherText.replace("d", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_te_textChanged(const QString &arg1)
+{
+    cipherText.replace("e", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tf_textChanged(const QString &arg1)
+{
+    cipherText.replace("f", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tg_textChanged(const QString &arg1)
+{
+    cipherText.replace("g", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_th_textChanged(const QString &arg1)
+{
+    cipherText.replace("h", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_ti_textChanged(const QString &arg1)
+{
+    cipherText.replace("i", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tj_textChanged(const QString &arg1)
+{
+    cipherText.replace("j", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tk_textChanged(const QString &arg1)
+{
+    cipherText.replace("k", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tl_textChanged(const QString &arg1)
+{
+    cipherText.replace("l", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tm_textChanged(const QString &arg1)
+{
+    cipherText.replace("m", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tn_textChanged(const QString &arg1)
+{
+    cipherText.replace("n", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_to_textChanged(const QString &arg1)
+{
+    cipherText.replace("o", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tp_textChanged(const QString &arg1)
+{
+    cipherText.replace("p", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tq_textChanged(const QString &arg1)
+{
+    cipherText.replace("q", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tr_textChanged(const QString &arg1)
+{
+    cipherText.replace("r", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_ts_textChanged(const QString &arg1)
+{
+    cipherText.replace("s", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tt_textChanged(const QString &arg1)
+{
+    cipherText.replace("t", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tu_textChanged(const QString &arg1)
+{
+    cipherText.replace("u", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tv_textChanged(const QString &arg1)
+{
+    cipherText.replace("v", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tw_textChanged(const QString &arg1)
+{
+    cipherText.replace("w", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tx_textChanged(const QString &arg1)
+{
+    cipherText.replace("x", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_ty_textChanged(const QString &arg1)
+{
+    cipherText.replace("y", arg1, Qt::CaseInsensitive);
+}
+
+void Widget::on_tz_textChanged(const QString &arg1)
+{
+    cipherText.replace("z", arg1, Qt::CaseInsensitive);
 }

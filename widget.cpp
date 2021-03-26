@@ -23,7 +23,7 @@ void Widget::on_btnClose_clicked()
 
 void Widget::on_cipher_textChanged()
 {
-    QString cipherText = ui->cipher->toPlainText();
+    cipherText = ui->cipher->toPlainText();
 
     for (int i = 0; i < alphabet.size(); i++) {
         analystic[i].character = alphabet.at(i);
@@ -70,8 +70,6 @@ void Widget::on_cipher_textChanged()
 
 void Widget::on_btnReplace_clicked()
 {
-    cipherText = ui->cipher->toPlainText();
-
     ui->plain->setText(cipherText);
 
 }

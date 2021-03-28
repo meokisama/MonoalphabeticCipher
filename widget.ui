@@ -814,6 +814,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -846,6 +849,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -880,6 +886,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -912,6 +921,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -946,6 +958,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -978,6 +993,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1012,6 +1030,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1044,6 +1065,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1078,6 +1102,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1110,6 +1137,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1144,6 +1174,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1177,6 +1210,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1209,6 +1245,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1258,6 +1297,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1290,6 +1332,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1324,6 +1369,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1356,6 +1404,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1390,6 +1441,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1422,6 +1476,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1456,6 +1513,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1488,6 +1548,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1522,6 +1585,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1554,6 +1620,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1588,6 +1657,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1621,6 +1693,9 @@ background-color: rgb(255, 106, 108);
         <property name="text">
          <string/>
         </property>
+        <property name="maxLength">
+         <number>1</number>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
@@ -1653,6 +1728,9 @@ background-color: rgb(255, 106, 108);
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="maxLength">
+         <number>1</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

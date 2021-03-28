@@ -13,8 +13,6 @@ Widget::~Widget()
     delete ui;
 }
 
-QString Widget::cipherText;
-
 void Widget::on_btnClose_clicked()
 {
     close();
@@ -22,7 +20,7 @@ void Widget::on_btnClose_clicked()
 
 void Widget::on_cipher_textChanged()
 {
-    cipherText = ui->cipher->toPlainText();
+    QString cipherText = ui->cipher->toPlainText();
 
     for (int i = 0; i < alphabet.size(); i++) {
         analystic[i].character = alphabet.at(i);
@@ -69,8 +67,75 @@ void Widget::on_cipher_textChanged()
 
 void Widget::on_btnReplace_clicked()
 {
-    ui->plain->setText(cipherText);
+    QString CipherText = ui->cipher->toPlainText();
 
+    QString PlainText, alpha[26];
+
+    for (int i = 0; i < 26; i++ ) {
+        alpha[i] = alphabet[i];
+    }
+
+    if (ui->ta->text() != "") alpha[0] = ui->ta->text();
+    if (ui->tb->text() != "") alpha[1] = ui->tb->text();
+    if (ui->tc->text() != "") alpha[2] = ui->tc->text();
+    if (ui->td->text() != "") alpha[3] = ui->td->text();
+    if (ui->te->text() != "") alpha[4] = ui->te->text();
+    if (ui->tf->text() != "") alpha[5] = ui->tf->text();
+    if (ui->tg->text() != "") alpha[6] = ui->tg->text();
+    if (ui->th->text() != "") alpha[7] = ui->th->text();
+    if (ui->ti->text() != "") alpha[8] = ui->ti->text();
+    if (ui->tj->text() != "") alpha[9] = ui->tj->text();
+    if (ui->tk->text() != "") alpha[10] = ui->tk->text();
+    if (ui->tl->text() != "") alpha[11] = ui->tl->text();
+    if (ui->tm->text() != "") alpha[12] = ui->tm->text();
+    if (ui->tn->text() != "") alpha[13] = ui->tn->text();
+    if (ui->to->text() != "") alpha[14] = ui->to->text();
+    if (ui->tp->text() != "") alpha[15] = ui->tp->text();
+    if (ui->tq->text() != "") alpha[16] = ui->tq->text();
+    if (ui->tr->text() != "") alpha[17] = ui->tr->text();
+    if (ui->ts->text() != "") alpha[18] = ui->ts->text();
+    if (ui->tt->text() != "") alpha[19] = ui->tt->text();
+    if (ui->tu->text() != "") alpha[20] = ui->tu->text();
+    if (ui->tv->text() != "") alpha[21] = ui->tv->text();
+    if (ui->tw->text() != "") alpha[22] = ui->tw->text();
+    if (ui->tx->text() != "") alpha[23] = ui->tx->text();
+    if (ui->ty->text() != "") alpha[24] = ui->ty->text();
+    if (ui->tz->text() != "") alpha[25] = ui->tz->text();
+
+    for (int i = 0; i < CipherText.size() ; i++ ) {
+        if ('a' <= CipherText[i] && CipherText[i] <= 'z')
+        {
+            if(CipherText[i] == 'a') PlainText.append(alpha[0]);
+            else if(CipherText[i] == 'b') PlainText.append(alpha[1]);
+            else if(CipherText[i] == 'c') PlainText.append(alpha[2]);
+            else if(CipherText[i] == 'd') PlainText.append(alpha[3]);
+            else if(CipherText[i] == 'e') PlainText.append(alpha[4]);
+            else if(CipherText[i] == 'f') PlainText.append(alpha[5]);
+            else if(CipherText[i] == 'g') PlainText.append(alpha[6]);
+            else if(CipherText[i] == 'h') PlainText.append(alpha[7]);
+            else if(CipherText[i] == 'i') PlainText.append(alpha[8]);
+            else if(CipherText[i] == 'j') PlainText.append(alpha[9]);
+            else if(CipherText[i] == 'k') PlainText.append(alpha[10]);
+            else if(CipherText[i] == 'l') PlainText.append(alpha[11]);
+            else if(CipherText[i] == 'm') PlainText.append(alpha[12]);
+            else if(CipherText[i] == 'n') PlainText.append(alpha[13]);
+            else if(CipherText[i] == 'o') PlainText.append(alpha[14]);
+            else if(CipherText[i] == 'p') PlainText.append(alpha[15]);
+            else if(CipherText[i] == 'q') PlainText.append(alpha[16]);
+            else if(CipherText[i] == 'r') PlainText.append(alpha[17]);
+            else if(CipherText[i] == 's') PlainText.append(alpha[18]);
+            else if(CipherText[i] == 't') PlainText.append(alpha[19]);
+            else if(CipherText[i] == 'u') PlainText.append(alpha[20]);
+            else if(CipherText[i] == 'v') PlainText.append(alpha[21]);
+            else if(CipherText[i] == 'w') PlainText.append(alpha[22]);
+            else if(CipherText[i] == 'x') PlainText.append(alpha[23]);
+            else if(CipherText[i] == 'y') PlainText.append(alpha[24]);
+            else if(CipherText[i] == 'z') PlainText.append(alpha[25]);
+        }
+        else PlainText.append(CipherText[i]);
+    }
+
+    ui->plain->setText(PlainText);
 }
 
 void Widget::on_btnMinimize_clicked()
@@ -115,133 +180,3 @@ void Widget::on_btnInfo_clicked()
     QMessageBox::information(this, tr("  Phoenix Legion"), tr("Copyright - Phoenix Legion. \t\n\n[NT219.L21.ANTT] Letter Frequency Attack.\t\n"), QMessageBox::Ok);
 }
 
-void Widget::on_ta_textChanged(const QString &arg1)
-{
-    cipherText.replace("a", arg1, Qt::CaseInsensitive);
-
-}
-
-void Widget::on_tb_textChanged(const QString &arg1)
-{
-    cipherText.replace("b", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tc_textChanged(const QString &arg1)
-{
-    cipherText.replace("c", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_td_textChanged(const QString &arg1)
-{
-    cipherText.replace("d", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_te_textChanged(const QString &arg1)
-{
-    cipherText.replace("e", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tf_textChanged(const QString &arg1)
-{
-    cipherText.replace("f", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tg_textChanged(const QString &arg1)
-{
-    cipherText.replace("g", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_th_textChanged(const QString &arg1)
-{
-    cipherText.replace("h", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_ti_textChanged(const QString &arg1)
-{
-    cipherText.replace("i", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tj_textChanged(const QString &arg1)
-{
-    cipherText.replace("j", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tk_textChanged(const QString &arg1)
-{
-    cipherText.replace("k", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tl_textChanged(const QString &arg1)
-{
-    cipherText.replace("l", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tm_textChanged(const QString &arg1)
-{
-    cipherText.replace("m", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tn_textChanged(const QString &arg1)
-{
-    cipherText.replace("n", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_to_textChanged(const QString &arg1)
-{
-    cipherText.replace("o", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tp_textChanged(const QString &arg1)
-{
-    cipherText.replace("p", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tq_textChanged(const QString &arg1)
-{
-    cipherText.replace("q", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tr_textChanged(const QString &arg1)
-{
-    cipherText.replace("r", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_ts_textChanged(const QString &arg1)
-{
-    cipherText.replace("s", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tt_textChanged(const QString &arg1)
-{
-    cipherText.replace("t", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tu_textChanged(const QString &arg1)
-{
-    cipherText.replace("u", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tv_textChanged(const QString &arg1)
-{
-    cipherText.replace("v", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tw_textChanged(const QString &arg1)
-{
-    cipherText.replace("w", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tx_textChanged(const QString &arg1)
-{
-    cipherText.replace("x", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_ty_textChanged(const QString &arg1)
-{
-    cipherText.replace("y", arg1, Qt::CaseInsensitive);
-}
-
-void Widget::on_tz_textChanged(const QString &arg1)
-{
-    cipherText.replace("z", arg1, Qt::CaseInsensitive);
-}
